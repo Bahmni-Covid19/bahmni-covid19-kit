@@ -1,0 +1,15 @@
+Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Description:en,Data class,Data type,Answers,Members
+9f6ea103-a5bd-44be-9f0e-9dbef10f9391,,,"COVID-19-Starter, Lactating Mother",Lactating Mother,,Question,Coded,No; Yes; Unknown;,
+143393d5-b760-42df-b68d-5137fd48079c,,,"COVID-19-Starter, Mental Health Conditions",Mental Health Conditions,,Diagnosis,Text,,
+509bd9c7-2adc-437f-8d97-a32fd29f6a88,,,"COVID-19-Starter, Smoking Status",Smoking Status,,Question,Coded,No; Yes; Unknown;,
+1067be5f-fcd5-497b-b5bc-0a1a81d9d46c,,,"COVID-19-Starter, Other",Other,Generic text answer to specify additional details.,Question,Text,,
+acdfe5b1-5ab1-4f63-8627-d220dd0262b6,,,"COVID-19-Starter, Symptoms present",Symptoms present,,Question,Coded,SYMPTOMATIC; Asymptomatic; Unknown,
+61fbc3cc-a69d-4a72-b0e6-516558eb69cd,,,"COVID-19-Starter, Institutional quarantine",Institutional quarantine,If the patient is taken into quarantine at a health institution.,Procedure,N/A,,
+555d1823-f70b-4123-ae7e-dd196ec2cb92,,,"COVID-19-Starter, Symptoms",Symptoms,,Diagnosis,Coded,Myalgia; Abdominal pain; Chest pain; Nausea and Vomiting; Headache; Fever; Shortness of breath; Diarrhea; Cough; Sore throat; Chills; Weakness; Rhinorrhea; Joint pain;  Irritability,
+fe6c32ee-715e-451e-896b-e64afb89f93e,,,"COVID-19-Starter, Symptom information",Symptom information,,ConvSet,N/A,,"COVID-19-Starter, Symptoms present; Sign/symptom start date; COVID-19-Starter, Symptoms; COVID-19-Starter, Other"
+d1c0fa50-31a9-4f42-90f7-464989bf5f3d,,,"COVID-19-Starter, Comorbidities",Comorbidities,,Question,Coded,"Diabetes mellitus, type 1; Diabetes mellitus, type 2; Chronic Kidney Disease; Chronic asthma; Hypertension; Chronic Pulmonary Heart Disease; Epilepsy; TUBERCULOSIS; Sickle-cell anemia; Cerebrovascular accident;Rheumatic heart disease; Cardiomyopathy; HIV Positive; Malnutrition; Cancer; immunocompromised state",
+3a122883-cfd0-4887-8747-439f85d6ac61,,,"COVID-19-Starter, Comorbidities information",Comorbidities Information,,ConvSet,N/A,,"COVID-19-Starter, Comorbidities; COVID-19-Starter, Mental Health Conditions; COVID-19-Starter, Smoking Status; COVID-19-Starter, Other"
+b19b55c0-f0b0-4de4-9c90-713147f564dc,,,"COVID-19-Starter, Test done",Test done,,Question,Coded,No; Yes; Unknown;,
+9a46b1f3-699a-4755-ba67-c769d7511313,,,"COVID-19-Starter, Test result",Test result,,Question,Coded,Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) detected; Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) not detected; Pending status,
+5c66b4c8-7086-47f6-a0ac-44c7b423695d,,,"COVID-19-Starter, Date of test",Date of test,,Question,Date,,
+8a8ff846-98b3-48c6-88e7-5b734654a56a,,,"COVID-19-Starter, Decision",Decision,,Question,Coded,"Self-quarantine; COVID-19-Starter, Institutional quarantine; INPATIENT CARE OR HOSPITALIZATION",

@@ -1,0 +1,44 @@
+plugins {
+    id "nebula.ospackage" version "3.4.0"
+}
+
+group 'org.bahmni.covid19'
+version project.bahmniRelease
+
+task extractBahmniPlaybooks(type: Copy) {
+    from file("${projectDir}/../playbooks")
+    into file("${projectDir}/resources/playbooks")
+}
+
+ospackage {
+    packageName = 'bahmni-covid19-installer'
+    release = "2"
+    arch = NOARCH
+    os = LINUX
+    user = 'bahmni'
+    permissionGroup = 'bahmni'
+
+    into '/opt/bahmni-covid19-installer'
+
+    from ("${projectDir}/resources/") {
+        fileMode = 0755
+        createDirectoryEntry = true
+        include('playbooks/')
+    }
+
+    from ("${projectDir}/resources/ansible.cfg") {
+        fileMode = 0644
+        createDirectoryEntry = true
+        into 'playbooks'
+    }
+}
+
+buildRpm {
+    dependsOn 'extractBahmniPlaybooks'
+
+    requires('bahmni-installer', '0.92-147', GREATER | EQUAL)
+    requires('bahmni-emr', '0.92-188', GREATER | EQUAL)
+
+    preInstall file("${projectDir}/scripts/preinstall.sh")
+    postInstall file("${projectDir}/scripts/postinstall.sh")
+}

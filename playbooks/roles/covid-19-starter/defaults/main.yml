@@ -1,0 +1,5 @@
+# bahmni.formTranslations.directory
+bahmni_forms_translations_dir: "/var/www/bahmni_config/openmrs/apps/forms/translations"
+openmrs_install_dir: "/opt/openmrs"
+mysql_root_user: root
+mysql_root_password: P@ssw0rd
