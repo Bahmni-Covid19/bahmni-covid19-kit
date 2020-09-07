@@ -1,0 +1,1 @@
+# bahmni-covid19-kit
