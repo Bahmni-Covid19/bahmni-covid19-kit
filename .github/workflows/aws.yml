@@ -11,7 +11,7 @@ jobs:
       - id: step1
         run: cd package
       - id: step2
-        run: ./gradlew
+        run: ./gradlew buildRpm
       - id: step3
      
 #   deploy:
