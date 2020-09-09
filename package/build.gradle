@@ -2,6 +2,10 @@ plugins {
     id "nebula.ospackage" version "3.4.0"
 }
 
+ext {
+    releaseVersion = System.getenv('release_version')
+}
+
 group 'org.bahmni.covid19'
 version=0.92
 
