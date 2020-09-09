@@ -16,7 +16,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: rpm
-          path: package/build/distributions/bahmni-covid19-installer-0.92-${{ github.run_number }}.noarch.rpm
+          path: package/build/distributions/bahmni-covid19-installer-0.92.noarch.rpm
       - name: Upload file to bucket
         uses: zdurham/s3-upload-github-action@master
         with:
