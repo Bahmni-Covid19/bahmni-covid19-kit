@@ -28,11 +28,19 @@
     owner: bahmni
     mode: a+rwx
 
-- name: ensure that the intializer is present in the correct version
-  copy:
-    src: initializer-2.0.0.omod
-    dest:  "{{ openmrs_install_dir }}/modules/"
+- name: download the initializer version 2.0.0
+  get_url:
+    url: https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/openmrs/module/initializer-omod/2.0.0/initializer-omod-2.0.0.jar
+    dest:  "{{ openmrs_install_dir }}/modules/initializer-2.0.0.omod"
     owner: bahmni
+    group: bahmni
+
+- name: download the ie apps version 1.0.0
+  get_url:
+    url: https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/bahmni/module/bahmni.ie.apps-omod/1.0.0/bahmni.ie.apps-omod-1.0.0.jar
+    dest:  "{{ openmrs_install_dir }}/modules/bahmni.ie.apps-1.0.0.omod"
+    owner: bahmni
+    group: bahmni
 
 # TODO: refactor later. avoid database conflicts
 - name: update concept sources
