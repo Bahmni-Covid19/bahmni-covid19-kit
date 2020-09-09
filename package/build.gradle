@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'org.bahmni.covid19'
-version project.bahmniRelease
+version=0.92
 
 task extractBahmniPlaybooks(type: Copy) {
     from file("${projectDir}/../playbooks")
