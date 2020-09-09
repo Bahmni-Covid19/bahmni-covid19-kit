@@ -12,7 +12,7 @@ task extractBahmniPlaybooks(type: Copy) {
 
 ospackage {
     packageName = 'bahmni-covid19-installer'
-    release = "2"
+//    release = "2"
     arch = NOARCH
     os = LINUX
     user = 'bahmni'
