@@ -14,7 +14,7 @@ jobs:
       - id: build-RPM
         run: |
           cd package && ./gradlew buildRpm
-          cp package/build/distributions/bahmni-covid19-installer-0.92.noarch.rpm package/build/distributions/bahmni-covid19-installer-0.92${{ github.run_number }}.noarch.rpm
+          mv build/distributions/bahmni-covid19-installer-0.92.noarch.rpm build/distributions/bahmni-covid19-installer-0.92${{ github.run_number }}.noarch.rpm
       - uses: actions/upload-artifact@v2
         with:
           name: rpm
