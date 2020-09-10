@@ -33,30 +33,35 @@
     paths: "/opt/openmrs/modules/"
     patterns: "^initializer.(?!(2\\.0\\.0)).*\\.omod$"
     use_regex: yes
-  register: existing_initializer_file
+  register: existing_initializer_module
+
+- name: verify if the ie apps omod version is not 1.0.0
+  find:
+    paths: "/opt/openmrs/modules/"
+    patterns: "^bahmni\\.ie\\.apps.(?!(1\\.0\\.0)).*\\.omod$"
+    use_regex: yes
+  register: existing_ie_apps_module
 
 - debug:
-  var: existing_initializer_file
+  var: existing_initializer_module
 
-- name: delete existing older version of initializer module if present
+- name: delete existing older version of initializer and ie apps module if present
   file:
     path: "{{ item.path }}"
     state: absent
-  with_items: "{{ existing_initializer_file.files }}"
+  with_items: 
+    - "{{ existing_initializer_module.files }}"
+    - "{{ existing_ie_apps_module.files }}"
 
-- name: download the initializer version 2.0.0
+- name: download the required initializer omod and ie apps omod
   get_url:
-    url: https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/openmrs/module/initializer-omod/2.0.0/initializer-omod-2.0.0.jar
-    dest:  "{{ openmrs_modules_dir }}/initializer-2.0.0.omod"
+    url: "{{ item.url }}"
+    dest:  "{{ item.dest }}"
     owner: bahmni
     group: bahmni
-
-- name: download the ie apps version 1.0.0
-  get_url:
-    url: https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/bahmni/module/bahmni.ie.apps-omod/1.0.0/bahmni.ie.apps-omod-1.0.0.jar
-    dest:  "{{ openmrs_modules_dir }}/bahmni.ie.apps-1.0.0.omod"
-    owner: bahmni
-    group: bahmni
+  with_items:
+    - {"url": "https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/openmrs/module/initializer-omod/2.0.0/initializer-omod-2.0.0.jar", "dest": "{{ openmrs_modules_dir }}/initializer-2.0.0.omod"}
+    - {"url": "https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/bahmni/module/bahmni.ie.apps-omod/1.0.0/bahmni.ie.apps-omod-1.0.0.jar", "dest": "{{ openmrs_modules_dir }}/bahmni.ie.apps-1.0.0.omod"}
 
 # TODO: refactor later. avoid database conflicts
 - name: update concept sources
