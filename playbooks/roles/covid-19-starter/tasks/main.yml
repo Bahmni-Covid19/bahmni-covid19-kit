@@ -28,17 +28,33 @@
     owner: bahmni
     mode: a+rwx
 
+- name: verify if the  initializer omod version is not 2.0.0
+  find:
+    paths: "/opt/openmrs/modules/"
+    patterns: "^initializer.(?!(2\\.0\\.0)).*\\.omod$"
+    use_regex: yes
+  register: existing_initializer_file
+
+- debug:
+  var: existing_initializer_file
+
+- name: delete existing older version of initializer module if present
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ existing_initializer_file.files }}"
+
 - name: download the initializer version 2.0.0
   get_url:
     url: https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/openmrs/module/initializer-omod/2.0.0/initializer-omod-2.0.0.jar
-    dest:  "{{ openmrs_install_dir }}/modules/initializer-2.0.0.omod"
+    dest:  "{{ openmrs_modules_dir }}/initializer-2.0.0.omod"
     owner: bahmni
     group: bahmni
 
 - name: download the ie apps version 1.0.0
   get_url:
     url: https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/bahmni/module/bahmni.ie.apps-omod/1.0.0/bahmni.ie.apps-omod-1.0.0.jar
-    dest:  "{{ openmrs_install_dir }}/modules/bahmni.ie.apps-1.0.0.omod"
+    dest:  "{{ openmrs_modules_dir }}/bahmni.ie.apps-1.0.0.omod"
     owner: bahmni
     group: bahmni
 
