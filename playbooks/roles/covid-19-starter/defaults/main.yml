@@ -4,3 +4,7 @@ openmrs_install_dir: "/opt/openmrs"
 openmrs_modules_dir: "{{ openmrs_install_dir }}/modules"
 mysql_root_user: root
 mysql_root_password: P@ssw0rd
+download_urls:
+  initializer: "https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/openmrs/module/initializer-omod/2.0.0/initializer-omod-2.0.0.jar"
+  ie_apps: "https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/bahmni/module/bahmni.ie.apps-omod/1.0.0/bahmni.ie.apps-omod-1.0.0.jar"
+  appointments: "https://repo1.maven.org/maven2/org/bahmni/module/appointments-api/1.2.0/appointments-api-1.2.0.jar"
