@@ -42,23 +42,33 @@
     use_regex: yes
   register: existing_ie_apps_module
 
-- name: delete existing older version of initializer and ie apps module if present
+- name: verify if the appointments omod version is not 1.2.x
+  find:
+    paths: "/opt/openmrs/modules/"
+    patterns: "^appointments.(?!(1\\.2)).*\\.omod$"
+    use_regex: yes
+  register: existing_appointments_module
+
+- name: delete existing older version of initializer, ie apps and appointments module if present
   file:
     path: "{{ item.path }}"
     state: absent
   with_items: 
     - "{{ existing_initializer_module.files }}"
     - "{{ existing_ie_apps_module.files }}"
+    - "{{ existing_appointments_module.files }}"
 
-- name: download the required initializer omod and ie apps omod
+- name: download the required initializer omod, ie apps, appointments omod
   get_url:
     url: "{{ item.url }}"
     dest:  "{{ item.dest }}"
     owner: bahmni
     group: bahmni
+  when: item.shouldDownload
   with_items:
-    - {"url": "https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/openmrs/module/initializer-omod/2.0.0/initializer-omod-2.0.0.jar", "dest": "{{ openmrs_modules_dir }}/initializer-2.0.0.omod"}
-    - {"url": "https://openmrs.jfrog.io/artifactory/mekom-solutions-cache/org/bahmni/module/bahmni.ie.apps-omod/1.0.0/bahmni.ie.apps-omod-1.0.0.jar", "dest": "{{ openmrs_modules_dir }}/bahmni.ie.apps-1.0.0.omod"}
+    - {"url": "{{ download_urls.initializer }}", "dest": "{{ openmrs_modules_dir }}/initializer-2.0.0.omod", "shouldDownload": "existing_initializer_module.matches > 1"}
+    - {"url": "{{ download_urls.ie_apps }}", "dest": "{{ openmrs_modules_dir }}/bahmni.ie.apps-1.0.0.omod", "shouldDownload": "existing_ie_apps_module.matches > 1"}
+    - {"url": "{{ download_urls.appointments }}", "dest": "{{ openmrs_modules_dir }}/appointments-1.2.0.omod", "shouldDownload": "existing_appointments_module.matches > 1"}
 
 # TODO: refactor later. avoid database conflicts
 - name: update concept sources
