@@ -14,9 +14,8 @@ jobs:
       - id: build-RPM
         run: |
           echo '::set-env name=RPM_RELEASE_VERSION::${{ github.run_number }}'
-          echo "RPM_RELEASE_VERSION '$RPM_RELEASE_VERSION'"
+          echo $RPM_RELEASE_VERSION
           cd package && ./gradlew buildRpm
-          mv build/distributions/bahmni-covid19-installer-0.92.noarch.rpm build/distributions/bahmni-covid19-installer-0.92-${{ github.run_number }}.noarch.rpm
 
       - uses: actions/upload-artifact@v2
         with:
