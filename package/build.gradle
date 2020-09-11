@@ -12,6 +12,7 @@ task extractBahmniPlaybooks(type: Copy) {
 
 ospackage {
     packageName = 'bahmni-covid19-installer'
+    release=System.getenv('RPM_RELEASE_VERSION')
     arch = NOARCH
     os = LINUX
     user = 'bahmni'
