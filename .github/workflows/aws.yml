@@ -13,8 +13,9 @@ jobs:
           java-version: 8
       - id: build-RPM
         run: |
+          export RPM_RELEASE_VERSION=${{ github.run_number }}
           echo '::set-env name=RPM_RELEASE_VERSION::${{ github.run_number }}'
-          echo '$RPM_RELEASE_VERSION'
+          echo "RPM_RELEASE_VERSION '$RPM_RELEASE_VERSION'"
           cd package && ./gradlew buildRpm
 
       - uses: actions/upload-artifact@v2
