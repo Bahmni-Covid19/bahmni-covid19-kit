@@ -10,6 +10,24 @@
     dest: "{{ openmrs_install_dir }}/configuration"
     owner: bahmni
 
+- name: copy programs
+  copy:
+    src: programs
+    dest: "{{ openmrs_install_dir }}/configuration"
+    owner: bahmni
+
+- name: copy programworkflows
+  copy:
+    src: programworkflows
+    dest: "{{ openmrs_install_dir }}/configuration"
+    owner: bahmni
+
+- name: copy programworkflowstates
+  copy:
+    src: programworkflowstates
+    dest: "{{ openmrs_install_dir }}/configuration"
+    owner: bahmni
+
 - name: create translations directory
   file:
     path: "{{ bahmni_forms_translations_dir }}"
