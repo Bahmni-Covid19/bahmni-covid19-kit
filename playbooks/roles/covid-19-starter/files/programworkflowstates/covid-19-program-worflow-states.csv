@@ -1,6 +1,6 @@
 Uuid,Void/Retire,Workflow,State concept,Initial,Terminal,_order:1000
-b3c52100-3e0f-476f-a31c-4232202f9ce0,,"COVID-19-Starter, COVID-19 Program WorkFlows",Susceptible,,,
-e6d03c2f-4ed6-4a33-a937-cad7e3b10b94,,"COVID-19-Starter, COVID-19 Program WorkFlows",Infectious,,,
-4af4681a-774b-4c89-80f1-701c5c6119a2,,"COVID-19-Starter, COVID-19 Program WorkFlows",Recovered,,true,
-2b4bdf3b-942e-40e3-b357-55f85b7c1ca4,,"COVID-19-Starter, COVID-19 Program WorkFlows",Negative,,true,
-90e147bd-9bc2-40c7-b5ce-b41d8b99f713,,"COVID-19-Starter, COVID-19 Program WorkFlows",Exposed,,,
+b3c52100-3e0f-476f-a31c-4232202f9ce0,,"COVID-19-Starter, COVID-19 Program WorkFlow","COVID-19 Susceptible",,,
+e6d03c2f-4ed6-4a33-a937-cad7e3b10b94,,"COVID-19-Starter, COVID-19 Program WorkFlow","COVID-19 Infectious",,,
+4af4681a-774b-4c89-80f1-701c5c6119a2,,"COVID-19-Starter, COVID-19 Program WorkFlow","COVID-19 Recovered",,true,
+2b4bdf3b-942e-40e3-b357-55f85b7c1ca4,,"COVID-19-Starter, COVID-19 Program WorkFlow","COVID-19 Negative",,true,
+90e147bd-9bc2-40c7-b5ce-b41d8b99f713,,"COVID-19-Starter, COVID-19 Program WorkFlow","COVID-19 Exposed",,,
