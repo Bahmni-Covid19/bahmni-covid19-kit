@@ -8,6 +8,7 @@ version=0.92
 task extractBahmniPlaybooks(type: Copy) {
     from file("${projectDir}/../playbooks")
     into file("${projectDir}/resources/playbooks")
+
 }
 
 ospackage {
