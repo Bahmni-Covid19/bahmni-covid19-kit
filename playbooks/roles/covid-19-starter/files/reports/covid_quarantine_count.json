@@ -1,0 +1,10 @@
+{
+    "covidTreatedReport": {
+        "name": "Number Of People Treated For Covid-19",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/covid_quarantine_count.sql"
+        }
+    }
+}
