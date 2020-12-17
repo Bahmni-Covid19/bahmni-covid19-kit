@@ -1,0 +1,8 @@
+Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Description:en,Data class,Data type,Answers,Members
+5a29fc82-0e23-4cd5-8fe4-bf0754418725,,,Covid-19,Covid-19,,Misc,N/A,,
+15099386-da0a-4d54-8610-d347f974146c,,,"COVID-19-Starter, Vaccination",Vaccination,,Question,Coded,Covid-19;,
+09d3b707-2f5d-43d1-9f91-9d1050f74dd8,,,"COVID-19-Starter, Covid Positive",Tested Covid Positive,,Question,Coded,No; Yes;,
+6b0ea4d2-ad84-436b-9fdd-fbaf9808dd18,,,"COVID-19-Starter, Vaccination Refused",Vaccination Refused,,Question,Coded,No; Yes;,
+587e3e6d-e08b-44f8-8640-e6aa6d11b4f9,,,"COVID-19-Starter, Vaccine Name",Vaccine Name,,Misc,Text,,
+ca530a0b-53eb-458d-85aa-373dddc9d93f,"","","COVID-19-Starter, Dosage",Dosage,"",ConvSet,N/A,"","Historical drug start date; VACCINE MANUFACTURER; COVID-19-Starter, Vaccine Name; VACCINE LOT NUMBER; Vaccine lot expiration date;"
+1abc7d06-da02-412c-a26d-bc47c815250a,,,"COVID-19-Starter, Post Vaccine Symptoms",Post Vaccine Symptoms,,Question,Coded,Fever; Chest Pain; Cough; Rash; Fatigue;,
