@@ -14,7 +14,7 @@ jobs:
       - id: build-RPM
         run: |
           export RPM_RELEASE_VERSION=${{ github.run_number }}
-          echo '::set-env name=RPM_RELEASE_VERSION::${{ github.run_number }}'
+          echo "name=RPM_RELEASE_VERSION::${{ github.run_number }}" >> $GITHUB_ENV
           echo "RPM_RELEASE_VERSION '$RPM_RELEASE_VERSION'"
           cd package && ./gradlew buildRpm
 
