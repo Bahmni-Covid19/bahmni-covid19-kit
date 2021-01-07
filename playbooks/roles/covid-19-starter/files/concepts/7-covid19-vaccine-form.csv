@@ -6,3 +6,6 @@ Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Descript
 587e3e6d-e08b-44f8-8640-e6aa6d11b4f9,,,"COVID-19-Starter, Vaccine Name",Vaccine Name,,Misc,Text,,
 ca530a0b-53eb-458d-85aa-373dddc9d93f,,,"COVID-19-Starter, Dosage",Dosage,,ConvSet,N/A,,"Historical drug start date; VACCINE MANUFACTURER; COVID-19-Starter, Vaccine Name; VACCINE LOT NUMBER; Vaccine lot expiration date;"
 1abc7d06-da02-412c-a26d-bc47c815250a,,,"COVID-19-Starter, Post Vaccine Symptoms",Post Vaccine Symptoms,,Question,Coded,Fever; Chest pain; Cough; Rash; Fatigue;,
+eb66cd05-9e9a-42db-9109-0e119c726362,"","","COVID-19-Starter, BDS Doctor",BDS Doctor,"",Misc,N/A,"",""
+fbef6f1b-ea69-450e-aedd-b58ece780fa2,"","","COVID-19-Starter, BDS Intern",BDS Intern,"",Misc,N/A,"",""
+d7bdec85-b41f-4e02-9424-3c7f61725b98,"","","COVID-19-Starter, MBBS Intern",MBBS Intern,"",Misc,N/A,"",""
