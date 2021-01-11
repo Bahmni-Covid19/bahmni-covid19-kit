@@ -3,9 +3,15 @@ Uuid,Void/Retire,Same as mappings,Fully specified name:en,Short name:en,Descript
 15099386-da0a-4d54-8610-d347f974146c,,,"COVID-19-Starter, Vaccination",Vaccination,,Question,Coded,Covid-19;,
 09d3b707-2f5d-43d1-9f91-9d1050f74dd8,,,"COVID-19-Starter, Covid Positive",Tested Covid Positive,,Question,Coded,No; Yes;,
 6b0ea4d2-ad84-436b-9fdd-fbaf9808dd18,,,"COVID-19-Starter, Vaccination Refused",Vaccination Refused,,Question,Coded,No; Yes;,
-587e3e6d-e08b-44f8-8640-e6aa6d11b4f9,,,"COVID-19-Starter, Vaccine Name",Vaccine Name,,Misc,Text,,
-ca530a0b-53eb-458d-85aa-373dddc9d93f,,,"COVID-19-Starter, Dosage",Dosage,,ConvSet,N/A,,"Historical drug start date; VACCINE MANUFACTURER; COVID-19-Starter, Vaccine Name; VACCINE LOT NUMBER; Vaccine lot expiration date;"
+587e3e6d-e08b-44f8-8640-e6aa6d11b4f9,,,"COVID-19-Starter, Vaccine Name",Vaccine Name,,Question,Coded,"MODERNA COVID-19 VACCINE; PFIZER-BIONTECH COVID-19 VACCINE; ASTRAZENECA COVID-19 VACCINE; GAMALEYA SPUTNIK V COVID-19 VACCINE; COVID-19-Starter, Other;",
+ca530a0b-53eb-458d-85aa-373dddc9d93f,,,"COVID-19-Starter, Dosage",Dosage,,ConvSet,N/A,,"COVID-19-Starter, Vaccination Refused; COVID-19-Starter, Reason for refusal; VACCINE LOT NUMBER; Vaccine lot expiration date; Date medication refills due;"
 1abc7d06-da02-412c-a26d-bc47c815250a,,,"COVID-19-Starter, Post Vaccine Symptoms",Post Vaccine Symptoms,,Question,Coded,Fever; Chest pain; Cough; Rash; Fatigue;,
-eb66cd05-9e9a-42db-9109-0e119c726362,"","","COVID-19-Starter, BDS Doctor",BDS Doctor,"",Misc,N/A,"",""
-fbef6f1b-ea69-450e-aedd-b58ece780fa2,"","","COVID-19-Starter, BDS Intern",BDS Intern,"",Misc,N/A,"",""
-d7bdec85-b41f-4e02-9424-3c7f61725b98,"","","COVID-19-Starter, MBBS Intern",MBBS Intern,"",Misc,N/A,"",""
+eb66cd05-9e9a-42db-9109-0e119c726362,,,"COVID-19-Starter, BDS Doctor",BDS Doctor,,Misc,N/A,,
+fbef6f1b-ea69-450e-aedd-b58ece780fa2,,,"COVID-19-Starter, BDS Intern",BDS Intern,,Misc,N/A,,
+d7bdec85-b41f-4e02-9424-3c7f61725b98,,,"COVID-19-Starter, MBBS Intern",MBBS Intern,,Misc,N/A,,
+a0ecf960-d4a7-4055-890f-9421998d6cd9,,,"COVID-19-Starter, GAMALEYA",GAMALEYA,,Misc,N/A,,
+62ef88eb-d4e0-4958-a0f9-5fd03f94d1fb,,,"COVID-19-Starter, ASTRAZENECA",ASTRAZENECA,,Misc,N/A,,
+20aeac9f-17fd-4f84-8d75-6788fadb6b57,,,"COVID-19-Starter, PFIZER-BIONTECH",PFIZER-BIONTECH,,Misc,N/A,,
+01ad2ef6-2690-4b92-b609-8842e18b1195,,,"COVID-19-Starter, MODERNA",MODERNA,,Misc,N/A,,
+f44ae0c7-5821-4e4d-980e-d6ab478648f2,,,"COVID-19-Starter, Reason for refusal",Reason for refusal,,Question,Text,,
+cbb8f011-73a5-48db-ab30-d15094a7684b,,,"COVID-19-Starter, Vaccine Symptoms",Symptoms,"",ConvSet,N/A,"","New sign/symptom; COVID-19-Starter, Post Vaccine Symptoms;"
