@@ -15,3 +15,26 @@ a0ecf960-d4a7-4055-890f-9421998d6cd9,,,"COVID-19-Starter, GAMALEYA",GAMALEYA,,Mi
 20aeac9f-17fd-4f84-8d75-6788fadb6b57,,,"COVID-19-Starter, PFIZER-BIONTECH",PFIZER-BIONTECH,,Misc,N/A,,
 01ad2ef6-2690-4b92-b609-8842e18b1195,,,"COVID-19-Starter, MODERNA",MODERNA,,Misc,N/A,,
 cbb8f011-73a5-48db-ab30-d15094a7684b,,,"COVID-19-Starter, Vaccine Symptoms",Symptoms,,ConvSet,N/A,,"New sign/symptom; COVID-19-Starter, Post Vaccine Symptoms;"
+91f47dd5-e031-47fd-a057-dc7f62cbfb3d,,,"COVID-19-Starter, Tested Covid Positive in last 30 days",Tested Covid Positive in last 30 days,,Misc,N/A,,,
+235a6246-6179-4309-ba84-6f0ec337eb48,,,"COVID-19-Starter, Pregnant",Pregnant,,Misc,N/A,,,
+9f6ea103-a5bd-44be-9f0e-9dbef10f9391,,,"COVID-19-Starter, Lactating-Mother",Lactating-Mother,,Misc,N/A,,,
+48e0204c-ba35-4705-8181-0c87654dbb26,,,"COVID-19-Starter, Undergoing Medication",Undergoing Medication,,Misc,N/A,,,
+6ab64f18-8146-47c9-bb03-79e3724051bd,,,"COVID-19-Starter, Reason for not eligible for vaccine",Reason for not eligible for vaccine,,Finding,Coded,"COVID-19-Starter, Tested Covid Positive in last 30 days;COVID-19-Starter, Pregnant;COVID-19-Starter, Lactating-Mother;Currently taking medication;COVID-19-Starter, Others",,
+ef5d7595-87f6-4814-95e0-41533a517783,,,"COVID-19-Starter, Others",Others,,Finding,Text,,,
+14adc326-fc70-4594-98f2-f8e0930c311e,,,"COVID-19-Starter, COVID-19 Vaccine Name",Vaccine Name,,Finding,Coded,GAMALEYA SPUTNIK V COVID-19 VACCINE;ASTRAZENECA COVID-19 VACCINE;PFIZER-BIONTECH COVID-19 VACCINE;MODERNA COVID-19 VACCINE;Other;,,
+9d415577-2a1b-4af7-a93e-9f6e0ca6d83b,,,"COVID-19-Starter, Police Personnel",Police Personnel,,Misc,N/A,,,
+d9168f11-94da-4be3-82db-337112975bf3,,,"COVID-19-Starter, Army Officers",Army Officers,,Misc,N/A,,,
+ca9af695-84a9-471d-a498-563a9e2a59d5,,,"COVID-19-Starter, Sanitary Workers",Sanitary Workers,,Misc,N/A,,,
+e51a092e-1d58-4851-b1aa-7c7bd40ecfeb,,,"COVID-19-Starter, Fire Fighters",Fire Fighters,,Misc,N/A,,,
+2b5e7991-8671-4bcd-b832-d68587129658,,,"COVID-19-Starter, Vaccine Recipient Category",Health Care Professional,Occupation as a skilled professional,Question,Coded,"COVID-19-Starter, BDS Doctor; CLINICAL OFFICER/DOCTOR; NURSE; Midwife; Pharmacist; COVID-19-Starter, BDS Intern; COVID-19-Starter, MBBS Intern; Police Personnel; Army Officers; Sanitary Workers; Fire Fighters",,
+eb4fb911-27b1-4f8d-a99e-d21f1e4bd0c5,,,"COVID-19-Starter, Eligibility",Eligibility,,ConvSet,N/A,,"Eligible for Vaccine; Reason for not eligible for vaccine; Currently taking medication; COVID-19-Starter, Others"
+56e38d63-0976-487d-ab69-86a39a83ef66,,,"COVID-19-Starter, Vaccine",Vaccine,,ConvSet,N/A,,"COVID-19-Starter, COVID-19 Vaccine Name; COVID-19-Starter, Others; VACCINE MANUFACTURER; COVID-19-Starter, Others; COVID-19-Starter, Dose-1; COVID-19-Starter, Dose-2"
+ea273f8e-db75-45c9-930d-fe1cc7b35140,,,"COVID-19-Starter, Vaccine Record",Vaccine Record,,ConvSet,N/A,,"COVID-19-Starter, Vaccine Recipient Category; COVID-19-Starter, Eligibility;COVID-19-Starter, Comorbidities Record; COVID-19-Starter, Vaccine"
+2ceea62e-5968-4513-a51f-8703053ba2ff,,,"COVID-19-Starter, Comorbidities Record",Comorbidities Record,,ConvSet,N/A,,"COVID-19-Starter, Comorbidities; COVID-19-Starter, Others"
+1419AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:1419,VACCINE MANUFACTURER,Manufacturer,,Question,Coded,"COVID-19-Starter, MODERNA; COVID-19-Starter, PFIZER-BIONTECH; COVID-19-Starter, ASTRAZENECA; COVID-19-Starter, GAMALEYA; COVID-19-Starter, Other;",,
+159463AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,CIEL:159463,Professional,Health Care Professional,Occupation as a skilled professional,Question,Coded,"COVID-19-Starter, BDS Doctor; CLINICAL OFFICER/DOCTOR; NURSE; Midwife; Pharmacist; COVID-19-Starter, BDS Intern; COVID-19-Starter, MBBS Intern",,
+a3811f1f-decf-4619-b47b-3269bdf7216e,,,"COVID-19-Starter, New symptoms since vaccination",New symptoms since vaccination,,Question,Coded,No; Yes; Unknown,
+f3dae568-4508-4afa-9785-671d74b957a8,,,"Date reported",Date reported,,Finding,Date,,,
+aa184f1b-dd76-4a46-abaf-e61e5e37ccd7,,,"COVID-19-Starter, New Symptoms",New Symptoms,,ConvSet,N/A,,"Date reported; COVID-19-Starter, Symptoms"
+1702716a-4cd8-4f20-a916-60175d70b107,,,"COVID-19-Starter, Dose-1",Dose-1 information,,ConvSet,N/A,,"VACCINE LOT NUMBER; Vaccine lot expiration date; Date medication refills due; COVID-19-Starter, New symptoms since vaccination; COVID-19-Starter, New Symptoms; COVID-19-Starter, Other"
+9927ce3e-729a-4456-8453-0a858953036e,,,"COVID-19-Starter, Dose-2",Dose-2 information,,ConvSet,N/A,,"VACCINE LOT NUMBER; Vaccine lot expiration date; COVID-19-Starter, New symptoms since vaccination; COVID-19-Starter, New Symptoms; COVID-19-Starter, Other"
