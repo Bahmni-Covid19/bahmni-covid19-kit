@@ -1,0 +1,25 @@
+- name: verify if the  initializer omod version is not 2.0.0
+  find:
+    paths: "{{ openmrs_modules_dir }}"
+    patterns: "^initializer.(?!(2\\.0\\.0)).*\\.omod$"
+    use_regex: yes
+  register: existing_initializer_module
+
+- name: verify if the ie apps omod version is not 1.0.0
+  find:
+    paths: "{{ openmrs_modules_dir }}"
+    patterns: "^bahmni\\.ie\\.apps.(?!(1\\.0\\.0)).*\\.omod$"
+    use_regex: yes
+  register: existing_ie_apps_module
+
+- name: verify if the appointments omod version is not 1.2.x
+  find:
+    paths: "{{ openmrs_modules_dir }}"
+    patterns: "^appointments.(?!(1\\.2)).*\\.omod$"
+    use_regex: yes
+  register: existing_appointments_module
+
+- name: stop installation if the required omod versions are not available
+  fail: msg="stopping installation as the required omod files are not present."
+  when: existing_appointments_module.matches is defined or existing_ie_apps_module.matches is defined or existing_initializer_module.matches is defined 
+

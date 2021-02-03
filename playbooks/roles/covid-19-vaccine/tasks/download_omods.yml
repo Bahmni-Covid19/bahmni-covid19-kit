@@ -1,0 +1,12 @@
+- name: download the required initializer omod, ie apps, appointments omod
+  get_url:
+    url: "{{ item.url }}"
+    dest:  "{{ item.dest }}"
+    owner: bahmni
+    group: bahmni
+  when: item.shouldDownload
+  with_items:
+    - {"url": "{{ download_urls.initializer }}", "dest": "{{ openmrs_modules_dir }}/initializer-2.0.0.omod", "shouldDownload": "existing_initializer_module.matches > 1"}
+    - {"url": "{{ download_urls.ie_apps }}", "dest": "{{ openmrs_modules_dir }}/bahmni.ie.apps-1.0.0.omod", "shouldDownload": "existing_ie_apps_module.matches > 1"}
+    - {"url": "{{ download_urls.appointments }}", "dest": "{{ openmrs_modules_dir }}/appointments-1.2.0.omod", "shouldDownload": "existing_appointments_module.matches > 1"}
+
