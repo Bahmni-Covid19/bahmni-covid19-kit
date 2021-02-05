@@ -1,0 +1,55 @@
+- name: Checking preconditions
+  include_tasks: check_preconditions.yml
+
+- name: Download required omod files
+  include_tasks: download_omods.yml
+
+- name: copy concepts
+  copy:
+    src: concepts
+    dest: "{{ openmrs_install_dir }}/configuration/"
+    owner: bahmni
+
+- name: copy forms
+  copy:
+    src: bahmniforms
+    dest: "{{ openmrs_install_dir }}/configuration/"
+    owner: bahmni
+
+- name: copy custom display control 
+  copy:
+    src: vaccinedisplaycontrol
+    dest: "{{ openmrs_config_apps_dir }}/customDisplayControl/"
+    owner: bahmni
+    recurse: yes
+
+- name: create translations directory
+  file:
+    path: "{{ bahmni_forms_translations_dir }}"
+    state: directory
+    owner: bahmni
+    recurse: yes
+    mode: u=rwx,g=rx,o=rx
+
+- name: copy form translations
+  vars:
+    bahmni_form_dir: "{{ openmrs_install_dir }}/configuration/bahmniforms"
+  script:
+    cmd: "publish_translations.py {{ bahmni_form_dir }} {{ bahmni_forms_translations_dir }}"
+
+- name: allow all users to modify translations
+  file:
+    path: "{{ bahmni_forms_translations_dir }}"
+    recurse: yes
+    owner: bahmni
+    group: bahmni
+    mode: u=rw,g=r,o=r
+
+# TODO: refactor later. avoid database conflicts
+- name: update concept sources
+  vars:
+     update_script: "{{ lookup('file', 'concept_sources_helper.sql') }}"
+  shell: echo {{ update_script | quote }} | mysql -u{{mysql_root_user}} -p{{mysql_root_password}} openmrs
+
+- name: Restart openmrs
+  service: name=openmrs state=restarted
