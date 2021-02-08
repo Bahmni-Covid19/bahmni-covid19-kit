@@ -16,12 +16,31 @@
     dest: "{{ openmrs_install_dir }}/configuration/"
     owner: bahmni
 
-- name: copy custom display control 
+- name: copy custom display control js files
   copy:
-    src: vaccinedisplaycontrol
-    dest: "{{ openmrs_config_apps_dir }}/customDisplayControl/"
+    src: vaccinedisplaycontrol/js/
+    dest: "{{ openmrs_config_apps_dir }}/customDisplayControl/js"
     owner: bahmni
-    recurse: yes
+    group: bahmni
+    mode: u=rwx,g=rx,o=rx
+
+- name: copy custom display control style files
+  copy:
+    src: vaccinedisplaycontrol/styles/
+    dest: "{{ openmrs_config_apps_dir }}/customDisplayControl/styles"
+    owner: bahmni
+    group: bahmni
+    mode: u=rwx,g=rx,o=rx
+
+
+- name: copy custom display control view files
+  copy:
+    src: vaccinedisplaycontrol/views/
+    dest: "{{ openmrs_config_apps_dir }}/customDisplayControl/views"
+    owner: bahmni
+    group: bahmni
+    mode: u=rwx,g=rx,o=rx
+
 
 - name: create translations directory
   file:
@@ -43,7 +62,7 @@
     recurse: yes
     owner: bahmni
     group: bahmni
-    mode: u=rw,g=r,o=r
+    mode: u=rwx,g=rw,o=rw
 
 # TODO: refactor later. avoid database conflicts
 - name: update concept sources
