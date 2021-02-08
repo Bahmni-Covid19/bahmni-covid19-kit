@@ -39,7 +39,7 @@ Bahmni.ConceptSet.FormConditions.rules = {
                      hide: ["COVID-19-Starter, Reason for not eligible for vaccine", "Currently taking medication", "COVID-19-Starter, Others"]
                  }
              }
-      }
+      },
     'COVID-19-Starter, Reason for not eligible for vaccine': function (formName, formFieldValues) {
         var reasons = formFieldValues["COVID-19-Starter, Reason for not eligible for vaccine"];
         var showList = [];
