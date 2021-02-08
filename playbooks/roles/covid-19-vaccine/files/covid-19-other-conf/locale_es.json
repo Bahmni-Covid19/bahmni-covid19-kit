@@ -68,6 +68,7 @@
   "HOME_DASHBOARD_KEY":"Panel de inicio",
   "MEDICATION_CHANGE_DURATION_BUTTON": "Cambiar Duración",
   "DASHBOARD_TITLE_Consultation_KEY": "Notas de la consulta",
+  "DASHBOARD_TITLE_VACCINATION_KEY": "Vaccination",
 
   "DASHBOARD_TITLE_APPOINTMENTS_KEY": "Cita",
   "DASHBOARD_APPOINTMENTS_SLOT_KEY": "Ranura",
